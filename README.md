@@ -10,7 +10,7 @@ This pipeline allows for processing of standard Slovenian, Croatian, Serbian and
 - dependency parsing
 - named entity recognition
 
-It also allows for processing of standard Macedonian on the levels of 
+It also allows for processing of standard Macedonian on the levels of
 
 - tokenization and sentence splitting
 - part-of-speech tagging
@@ -34,7 +34,7 @@ The differences of this pipeline to the original Stanza pipeline are the followi
 - Macedonian models (Macedonian is not available in UD yet)
 - non-standard models for Croatian, Slovenian, Serbian (there is no UD data for these varieties)
 
-The above modifications led to some important improvements in the tool’s performance in comparison to original Stanza. For standard Slovenian, comparing the CLASSLA-Stanza tool with Stanza on the [SloBENCH benchmark](https://slobench.cjvt.si/leaderboard/view/11), shows relative error reduction (part of the error removed by moving from Stanza to CLASSLA-Stanza) on sentence segmentation to be 98%, on token segmentation 50%, on lemmatization 69%, on morphosyntactic XPOS tagging 65%, and on dependency parsing 34%.
+The above modifications led to some important improvements in the tool's performance in comparison to original Stanza. For standard Slovenian, comparing the CLASSLA-Stanza tool with Stanza on the [SloBENCH benchmark](https://slobench.cjvt.si/leaderboard/view/11), shows relative error reduction (part of the error removed by moving from Stanza to CLASSLA-Stanza) on sentence segmentation to be 98%, on token segmentation 50%, on lemmatization 69%, on morphosyntactic XPOS tagging 65%, and on dependency parsing 34%.
 
 ## Citing
 
@@ -55,7 +55,7 @@ If you use this tool, please cite the following papers:
     pages = "29--34"
     }
 @misc{terčon2023classlastanza,
-      title={CLASSLA-Stanza: The Next Step for Linguistic Processing of South Slavic Languages}, 
+      title={CLASSLA-Stanza: The Next Step for Linguistic Processing of South Slavic Languages},
       author={Luka Terčon and Nikola Ljubešić},
       year={2023},
       eprint={2308.04255},
@@ -205,7 +205,7 @@ The named entity recognition processor ```ner``` identifies named entities in te
 
 ## Croatian examples
 
-### Example of standard Croatian 
+### Example of standard Croatian
 
 ```
 >>> import classla
