@@ -38,29 +38,19 @@ The above modifications led to some important improvements in the tool's perform
 
 ## Citing
 
-If you use this tool, please cite the following papers:
+If you use this tool, please cite the following paper:
 
 ```
-@inproceedings{ljubesic-dobrovoljc-2019-neural,
-    title = "What does Neural Bring? Analysing Improvements in Morphosyntactic Annotation and Lemmatisation of {S}lovenian, {C}roatian and {S}erbian",
-    author = "Ljube{\v{s}}i{\'c}, Nikola  and
-      Dobrovoljc, Kaja",
-    booktitle = "Proceedings of the 7th Workshop on Balto-Slavic Natural Language Processing",
-    month = aug,
-    year = "2019",
-    address = "Florence, Italy",
-    publisher = "Association for Computational Linguistics",
-    url = "https://www.aclweb.org/anthology/W19-3704",
-    doi = "10.18653/v1/W19-3704",
-    pages = "29--34"
-    }
-@misc{terčon2023classlastanza,
-      title={CLASSLA-Stanza: The Next Step for Linguistic Processing of South Slavic Languages},
-      author={Luka Terčon and Nikola Ljubešić},
-      year={2023},
-      eprint={2308.04255},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{ljubesic_2024_13936406,
+  title        = {{CLASSLA-Stanza: The Next Step for Linguistic 
+                   Processing of South Slavic Languages}},
+  author       = {Nikola Ljube\v{s}i\'{c} and Luka Ter\v{c}on and Kaja Dobrovoljc},
+  year         = 2024,
+  booktitle    = {Conference on Language Technologies and Digital Humanities (JT-DH-2024)},
+  address      = {Ljubljana, Slovenia},
+  publisher    = {Institute of Contemporary History},
+  doi          = {10.5281/zenodo.13936406},
+  url          = {https://doi.org/10.5281/zenodo.13936406}
 }
 
 ```
