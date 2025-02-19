@@ -123,7 +123,7 @@ For additional usage examples you can also consult the ```pipeline_demo.py``` fi
 
 ### Processing online texts
 
-A special web processing mode for processing texts obtained from the internet can be activated with the ```type="web"``` argument:
+A special web processing mode for processing texts obtained from the internet can be activated with the ```type="web"``` argument.
 
 ```
 >>> import classla
@@ -140,6 +140,38 @@ A special web processing mode for processing texts obtained from the internet ca
 4	preko	preko	ADP	Sg	Case=Gen	5	case	_	NER=O
 5	racunalnika	računalnik	NOUN	Ncmsg	Case=Gen|Gender=Masc|Number=Sing	3	obl	_	NER=O
 6	http://t.co/LwWyzs0cA0	http://t.co/LwWyzs0cA0	SYM	Xw	_	5	nmod	_	NER=O
+```
+
+### Processing spoken texts
+
+The pipeline also has a dedicated processing mode for spoken texts which uses models trained on spoken data transcripts to annotate the input text. This is currently only supported for the Slovenian models. It is activated by passing the ```type="spoken"``` argument to the ```Pipeline``` object.
+
+```
+>>> import classla
+>>> classla.download('sl', type='spoken')        # download spoken models for Slovenian
+>>> nlp = classla.Pipeline('sl', type='spoken')  # initialize the Slovenian spoken pipeline
+>>> doc = nlp("to je igra, ki jo igrajo, eee, ti, eee, člani družine.")   # run the pipeline
+>>> print(doc.to_conll())                        # print the output in CoNLL-U format
+# newpar id = 1
+# sent_id = 1.1
+# text = to je igra, ki jo igrajo, eee, ti, eee, člani družine.
+1       to      ta      DET     Pd-nsn  Case=Nom|Gender=Neut|Number=Sing|PronType=Dem   3       nsubj   _       NER=O
+2       je      biti    AUX     Va-r3s-n        Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin      3       cop     _       NER=O
+3       igra    igra    NOUN    Ncfsn   Case=Nom|Gender=Fem|Number=Sing 0       root    _       NER=O|SpaceAfter=No
+4       ,       ,       PUNCT   Z       _       7       punct   _       NER=O
+5       ki      ki      SCONJ   Cs      _       7       mark    _       NER=O
+6       jo      on      PRON    Pp3fsa--y       Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs|Variant=Short     7       obj     _       NER=O
+7       igrajo  igrati  VERB    Vmpr3p  Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin        3       acl     _       NER=O|SpaceAfter=No
+8       ,       ,       PUNCT   Z       _       9       punct   _       NER=O
+9       eee     eee     INTJ    I       _       7       discourse:filler        _       NER=O|SpaceAfter=No
+10      ,       ,       PUNCT   Z       _       9       punct   _       NER=O
+11      ti      ta      DET     Pd-mpn  Case=Nom|Gender=Masc|Number=Plur|PronType=Dem   15      det     _       NER=O|SpaceAfter=No
+12      ,       ,       PUNCT   Z       _       13      punct   _       NER=O
+13      eee     eee     INTJ    I       _       7       discourse:filler        _       NER=O|SpaceAfter=No
+14      ,       ,       PUNCT   Z       _       13      punct   _       NER=O
+15      člani   član    NOUN    Ncmpn   Case=Nom|Gender=Masc|Number=Plur        7       nsubj   _       NER=O
+16      družine družina NOUN    Ncfsg   Case=Gen|Gender=Fem|Number=Sing 15      nmod    _       NER=O|SpaceAfter=No
+17      .       .       PUNCT   Z       _       3       punct   _       NER=O
 ```
 
 ## Processors
